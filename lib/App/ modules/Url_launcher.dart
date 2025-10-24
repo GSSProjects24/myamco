@@ -5,6 +5,7 @@ class LaunchUrl {
       url,
       ) async {
     try {
+
       final Uri uri = Uri.parse(url);
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     } catch (e) {}
