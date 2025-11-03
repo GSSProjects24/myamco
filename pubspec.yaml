@@ -38,11 +38,18 @@ dependencies:
   get:
   dio:
   shared_preferences:
+  firebase_core: ^3.15.1
+  firebase_auth: ^5.6.2
+  cloud_firestore: ^5.6.11
+  flutter_local_notifications:
+  device_info_plus:
+  firebase_messaging:
   flutter_animate: ^4.5.2
   intl: ^0.20.2
   flutter_launcher_icons: ^0.13.1
   url_launcher: ^6.3.1
   change_app_package_name: ^1.5.0
+
 
 dev_dependencies:
   flutter_test:

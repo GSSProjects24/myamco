@@ -10,19 +10,26 @@ class UnionRepository {
   Future<GetUnionListModel?> getUnionUpdates() async {
     try {
       final prefs = await SharedPreferences.getInstance();
+
+      // ✅ Get both user_id and member_id
+      final userId = prefs.getString('user_id') ?? '';
       final memberId = prefs.getString('member_id') ?? '';
 
       final url = '${Constants.baseUrl}notify_list';
       print("POST URL: $url");
-      print("POST Body: { 'member_id': '$memberId' }");
+      print("POST Body: { 'user_id': '$userId', 'member_id': '$memberId' }");
 
       final response = await _dio.post(
         url,
-        data: {'member_id': memberId}, // POST body
+        data: {
+          'user_id': userId,      // ✅ Add user_id
+          'member_id': memberId,  // ✅ Keep member_id
+        },
       );
 
       print("Status Code: ${response.statusCode}");
       print("Response Data: ${response.data}");
+
 
       if (response.statusCode == 200) {
         return GetUnionListModel.fromJson(response.data);

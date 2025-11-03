@@ -39,11 +39,11 @@ class LogingModel {
     "error": errorResponse?.toJson(),
   };
 }
-
 class Data {
   String? notify;
   String? status;
   String? memberId;
+  String? userId;  // Add this field
   List<MemberDetail>? memberDetails;
   List<Detail>? nomineeDetails;
   List<Detail>? guardianDetails;
@@ -52,6 +52,7 @@ class Data {
     this.notify,
     this.status,
     this.memberId,
+    this.userId,  // Add this parameter
     this.memberDetails,
     this.nomineeDetails,
     this.guardianDetails,
@@ -61,6 +62,7 @@ class Data {
     notify: json["notify"],
     status: json["status"],
     memberId: json["member_id"],
+    userId: json["user_id"],  // Add this line
     memberDetails: json["member_details"] == null ? [] : List<MemberDetail>.from(json["member_details"]!.map((x) => MemberDetail.fromJson(x))),
     nomineeDetails: json["nominee_details"] == null ? [] : List<Detail>.from(json["nominee_details"]!.map((x) => Detail.fromJson(x))),
     guardianDetails: json["guardian_details"] == null ? [] : List<Detail>.from(json["guardian_details"]!.map((x) => Detail.fromJson(x))),
@@ -70,6 +72,7 @@ class Data {
     "notify": notify,
     "status": status,
     "member_id": memberId,
+    "user_id": userId,  // Add this line
     "member_details": memberDetails == null ? [] : List<dynamic>.from(memberDetails!.map((x) => x.toJson())),
     "nominee_details": nomineeDetails == null ? [] : List<dynamic>.from(nomineeDetails!.map((x) => x.toJson())),
     "guardian_details": guardianDetails == null ? [] : List<dynamic>.from(guardianDetails!.map((x) => x.toJson())),

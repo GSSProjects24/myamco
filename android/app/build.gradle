@@ -1,9 +1,13 @@
 plugins {
     id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
 }
+apply plugin: 'com.google.gms.google-services'
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
@@ -28,10 +32,10 @@ android {
         applicationId = "com.app.myamco"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode 4
-        versionName '1.0.4'
+        minSdkVersion 23
+        targetSdk 35
+        versionCode 5
+        versionName '1.0.5'
         multiDexEnabled true
     }
     signingConfigs {

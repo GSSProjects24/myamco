@@ -75,14 +75,14 @@ class UnionUpdateDetailPage extends StatelessWidget {
                 color: AppColors.primary,
               ),
             ),
-            const SizedBox(height: 10),
-            Text(
-              formattedDate,
-              style: const TextStyle(
-                fontSize: 14,
-                color: AppColors.secondary,
-              ),
-            ),
+            // const SizedBox(height: 10),
+            // Text(
+            //   formattedDate,
+            //   style: const TextStyle(
+            //     fontSize: 14,
+            //     color: AppColors.secondary,
+            //   ),
+            // ),
             const SizedBox(height: 20),
             const Text(
               "Description",

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "653736608013",
+    "project_id": "my-amco",
+    "storage_bucket": "my-amco.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653736608013:android:ef3fbd65c49f1a546df044",
+        "android_client_info": {
+          "package_name": "com.app.myamco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCbYBzvTJiQJHW6N8TP2SNMj1Y-3ai8Xc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
